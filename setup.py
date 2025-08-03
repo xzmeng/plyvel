@@ -17,7 +17,7 @@ def get_file_contents(filename):
 extra_compile_args = ['-Wall', '-g', '-x', 'c++', '-std=c++11']
 
 if platform.system() == 'Darwin':
-    extra_compile_args += ['-stdlib=libc++']
+    extra_compile_args += ['-stdlib=libc++', '-fno-rtti']
 
 ext_modules = [
     Extension(
